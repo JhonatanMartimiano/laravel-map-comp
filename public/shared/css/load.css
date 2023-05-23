@@ -1,0 +1,27 @@
+/*DEFAULT LOAD*/
+.ajax-load {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.ajax-load-box {
+    margin: auto;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.ajax-preloader img {
+    width: 80px;
+    height: 80px;
+}
+
+.ajax-load-box-title {
+    margin-top: 15px;
+    font-weight: var(--weight-strong);
+}

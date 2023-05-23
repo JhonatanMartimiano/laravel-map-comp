@@ -1,0 +1,15 @@
+form .alert.alert-success {
+    background-color: #28a745 !important;
+}
+
+form .alert.alert-info {
+    background-color: #17a2b8 !important;
+}
+
+form .alert.alert-warning {
+    background-color: #ffc107 !important;
+}
+
+form .alert.alert-danger {
+    background-color: #dc3545 !important;
+}

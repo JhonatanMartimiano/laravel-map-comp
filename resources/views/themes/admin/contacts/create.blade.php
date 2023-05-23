@@ -1,0 +1,63 @@
+<x-themes.admin._theme>
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">Usuários</h1>
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="{{ route('admin.dash.home') }}">Dashboard</a></li>
+                        <li class="breadcrumb-item active">Usuários</li>
+                    </ol>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">Criar Usuário</h3>
+                </div>
+                <div class="card-body">
+                    <form action="{{ route('admin.users.store') }}" method="POST">
+                        @csrf
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label>Nome</label>
+                                <input type="text" class="form-control" name="first_name"
+                                    placeholder="Digite seu nome">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label>Sobrenome</label>
+                                <input type="text" class="form-control" name="last_name"
+                                    placeholder="Digite seu sobrenome">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label>Foto</label>
+                                <input type="file" class="form-control" name="photo">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>E-mail</label>
+                                <input type="email" class="form-control" name="email"
+                                    placeholder="Digite seu e-mail">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Senha</label>
+                                <input type="password" class="form-control" name="password"
+                                    placeholder="Digite sua senha">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <a href="{{ route('admin.users.home') }}" class="btn btn-danger">Voltar</a>
+                            <button class="btn btn-success">Criar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+</x-themes.admin._theme>
