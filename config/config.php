@@ -53,12 +53,6 @@ return [
             "target" => "_self"
         ],
         (object)[
-            "route" => "/",
-            "icon" => "fa-share",
-            "name" => "Site",
-            "target" => "_blank"
-        ],
-        (object)[
             "route" => "/admin/logout",
             "icon" => "fa-sign-out-alt",
             "name" => "Sair",

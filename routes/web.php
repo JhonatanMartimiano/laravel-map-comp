@@ -41,7 +41,8 @@ Route::namespace("Admin")->group(function () {
         Route::get("/logout", [AuthController::class, "logout"])->name("admin.logout");
         Route::get("/dash", [DashController::class, "dash"])->name("admin.dash")->middleware('auth');
         Route::get("/dash/home", [DashController::class, "index"])->name("admin.dash.home")->middleware('auth');
-        Route::post("/dash/quiz", [DashController::class, "quiz"])->name("admin.dash.quiz")->middleware('auth');
+        Route::post("/dash/general", [DashController::class, "general"])->name("admin.dash.general")->middleware('auth');
+        Route::post("/dash/sector", [DashController::class, "sector"])->name("admin.dash.sector")->middleware('auth');
         Route::get("/sectors/home", [SectorController::class, "index"])->name("admin.sectors.home")->middleware('auth');
         Route::get("/sectors/create", [SectorController::class, "create"])->name("admin.sectors.create")->middleware('auth');
         Route::post("/sectors/store", [SectorController::class, "store"])->name("admin.sectors.store")->middleware('auth');

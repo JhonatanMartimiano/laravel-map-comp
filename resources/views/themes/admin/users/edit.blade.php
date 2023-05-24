@@ -42,7 +42,7 @@
                                 <input type="file" class="form-control" name="photo">
                             </div>
                             <div class="form-group col-md-3">
-                                <label>Perfil de Acesso</label>
+                                <label>Setor</label>
                                 <select name="sector_id" class="form-control">
                                     <option selected disabled value="">Selecionar</option>
                                     @if ($sectors)

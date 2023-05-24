@@ -48,7 +48,7 @@ class UserController extends Controller
             'email.email' => 'O e-mail não é válido.',
             'email.unique' => 'O e-mail já está cadastrado.',
             'password.required' => 'A senha é obrigatória.',
-            'sector_id.required' => 'O perfil de acesso é obrigatório.',
+            'sector_id.required' => 'O setor é obrigatório.',
             'sector_id.integer' => 'O valor desse campo é obrigatório ser um número.',
         ];
 
@@ -127,7 +127,7 @@ class UserController extends Controller
             'email.required' => 'O e-mail é obrigatório.',
             'email.email' => 'O e-mail não é válido.',
             'email.unique' => 'O e-mail já está cadastrado.',
-            'sector_id.required' => 'O perfil de acesso é obrigatório.',
+            'sector_id.required' => 'O setor é obrigatório.',
             'sector_id.integer' => 'O valor desse campo é obrigatório ser um número.',
         ];
 
@@ -147,7 +147,6 @@ class UserController extends Controller
         $user->first_name = $request->input('first_name');
         $user->last_name = $request->input('last_name');
         $user->email = $request->input('email');
-        $user->level = 4;
         $user->sector_id = $request->input('sector_id');
 
         if ($request->hasFile('photo')) {

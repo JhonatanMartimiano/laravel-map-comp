@@ -32,7 +32,7 @@
                             <tr>
                                 <th>Nome Completo</th>
                                 <th>E-mail</th>
-                                <th>Perfil de Acesso</th>
+                                <th>Setor</th>
                                 <th>Ações</th>
                             </tr>
                         </thead>
@@ -66,7 +66,7 @@
                             <tr>
                                 <th>Nome</th>
                                 <th>E-mail</th>
-                                <th>Perfil de Acesso</th>
+                                <th>Setor</th>
                                 <th>Ações</th>
                             </tr>
                         </tfoot>

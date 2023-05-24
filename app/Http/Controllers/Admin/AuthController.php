@@ -72,7 +72,7 @@ class AuthController extends Controller
             'email.email' => 'O e-mail não é válido.',
             'email.unique' => 'O e-mail já está cadastrado.',
             'password.required' => 'A senha é obrigatória.',
-            'sector_id.required' => 'O perfil de acesso é obrigatório.',
+            'sector_id.required' => 'O setor é obrigatório.',
             'sector_id.integer' => 'O valor desse campo é obrigatório ser um número.',
         ];
 

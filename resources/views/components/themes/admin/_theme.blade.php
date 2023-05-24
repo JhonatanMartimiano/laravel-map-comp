@@ -141,13 +141,33 @@
                             @php
                                 $active = url('') . $menu->route == url()->current();
                             @endphp
-                            <li class="nav-item">
-                                <a href="{{ $menu->route }}" class="nav-link {{ $active ? 'active' : '' }}"
-                                    target="{{ $menu->target }}">
-                                    <i class="nav-icon fas {{ $menu->icon }}"></i>
-                                    <p>{{ $menu->name }}</p>
-                                </a>
-                            </li>
+                            @if (auth()->user()->level == 5)
+                                <li class="nav-item">
+                                    <a href="{{ $menu->route }}" class="nav-link {{ $active ? 'active' : '' }}"
+                                        target="{{ $menu->target }}">
+                                        <i class="nav-icon fas {{ $menu->icon }}"></i>
+                                        <p>{{ $menu->name }}</p>
+                                    </a>
+                                </li>
+                            @endif
+                            @if (auth()->user()->level == 4 && $menu->name == 'Dashboard')
+                                <li class="nav-item">
+                                    <a href="{{ $menu->route }}" class="nav-link {{ $active ? 'active' : '' }}"
+                                        target="{{ $menu->target }}">
+                                        <i class="nav-icon fas {{ $menu->icon }}"></i>
+                                        <p>{{ $menu->name }}</p>
+                                    </a>
+                                </li>
+                            @endif
+                            @if (auth()->user()->level == 4 && $menu->name == 'Sair')
+                                <li class="nav-item">
+                                    <a href="{{ $menu->route }}" class="nav-link {{ $active ? 'active' : '' }}"
+                                        target="{{ $menu->target }}">
+                                        <i class="nav-icon fas {{ $menu->icon }}"></i>
+                                        <p>{{ $menu->name }}</p>
+                                    </a>
+                                </li>
+                            @endif
                         @endforeach
                     </ul>
                 </nav>
